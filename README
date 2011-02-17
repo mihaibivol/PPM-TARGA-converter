@@ -1,25 +1,14 @@
 convert 1.0
 
-1.Ce face?
-	Convert converteste o imagine din format PPM Ascii sau Binar în format TGA de tip 2 (unmapped RGB image), respectiv din format TGA de tip 2 în PPM Ascii. Momentan sunt acceptate numai imagini de tip RGB pe 24 de biți. 
+1.What do this program do?
+	Converts images:
+	Supported conversions:
+	PPM Binary/ASCII -> Targa type2 (unmapped RGB Image)
+	Targa (24) type2 -> PPM ASCII
 
-2.Compilare:
+2.Compiling:
 	make convert
 
-3.Utilizare și funcționare:
-	Executabilul primește ca argumente 2 nume de fișiere. Tipul conversiei este determinat în funcție de extensie. Fișierul de intrare este testat prin funcția CheckPPM/CheckTGA. Dacă acesta corespunde extensiei este returnat tipul formatului, dacă nu, este returnă eroare. Fișierul este încărcat într-un tip de dată care are ca atribute lățimea, înălțimea imaginii și o matrice RGB. După încărcarea imaginii, aceasta este transformată în formatul necesar.
-
-4.Fișiere sursă:
-	image.h: declarearea tipului Image, prototipul funcțiilor de alocare și dezalocare imagine;
-	image.c: funcțiile de alocare și dezalocare imagine;
-
-	ppm.h: prototipuri ale funcțiilor de încărcare și salvare pentru formatul ppm;
-	ppm.c: funcții de încărcare și salvare pentru formatul ppm;
-
-	tga.h: prototipuri ale funcțiilor de încărcare și salvare pentru formatul tga;
-	tga.c: funcții de încărcare și salvare pentru formatul tga;
-
-	convert.h: prototipuri ale funcțiilor de conversie (tga->ppm, ppm->tga);
-	convert.c: funcțiile de conversie;
-
-	main.c: apeluri ale funcțiilor de conversie.
+3.Usage:
+	convert file1 file2
+	
